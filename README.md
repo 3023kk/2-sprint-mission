@@ -90,3 +90,16 @@ export async function getProductList(page = 1, pageSize = 10, keyword = '') {
     return null;
   }
 }
+```
+
+## 데이터 베이스 셋업 
+
+```shell
+docker-compose up -d
+```
+> docker compose를 통해 PostgreSQL 17을 Background에서 실행합니다
+
+
+```shell
+npx prisma migrate dev --name "0_init"
+```
