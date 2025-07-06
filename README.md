@@ -25,23 +25,24 @@
 
 ---
 
-4. 프로젝트 구조
+## 4. 프로젝트 구조
 
+```text
 sprint-mission-4/
-├─ prisma/             # Prisma 스키마 & 마이그레이션
-├─ src/
-│  ├─ controllers/     # 각종 비즈니스 로직 처리
-│  ├─ middlewares/     # 인증·인가·에러 핸들러
-│  ├─ routers/         # 라우터 정의
-│  ├─ structs/         # 요청·응답 DTO
-│  └─ lib/             # 공통 유틸리티
-├─ .env
-├─ .gitignore
-├─ package.json
-└─ README.md
+├── prisma/       # Prisma 스키마 & 마이그레이션
+├── src/
+│   ├── controllers/  # 각종 비즈니스 로직 처리
+│   ├── middlewares/  # 인증·인가·에러 핸들러
+│   ├── routers/      # 라우터 정의
+│   ├── structs/      # 요청·응답 DTO
+│   └── lib/          # 공통 유틸리티
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-
-5. 향후 구현 예정 기능
+## 5. 향후 구현 예정 기능
 Refresh Token 로직
 
 좋아요(Like) 기능
