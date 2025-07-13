@@ -2,18 +2,27 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "token": "node src/utils/token.js --email=me@you.com --password=Secret123"
+    "dev:server": "nodemon src/index.js",
+    "dev:ts": "tsc --watch",
+    "dev": "concurrently --kill-others-on-fail \"npm run dev:ts\" \"npm run dev:server\"",
+    "token": "node src/utils/token.js --email=me@you.com --password=Secret123",
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.0.10",
+    "concurrently": "^9.2.0",
     "cross-env": "^7.0.3",
     "jest": "^30.0.3",
+    "nodemon": "^3.1.10",
     "prettier": "^3.3.2",
     "prisma": "^6.10.1",
-    "supertest": "^7.1.1"
+    "supertest": "^7.1.1",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
